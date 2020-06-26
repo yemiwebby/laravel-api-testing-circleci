@@ -45,16 +45,6 @@ jobs:
           name: "Create database and run migration"
           command: touch database/database.sqlite
 
-
-      - run:
-          name: "Generate Passport encryption keys"
-          command: php artisan passport:install
-
-      - run:
-          name: Run Laravel Server
-          command: php artisan serve
-          background: true
-
       # run tests with phpunit
       - run:
           name: "Run Tests"
