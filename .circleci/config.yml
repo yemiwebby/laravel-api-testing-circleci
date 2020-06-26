@@ -42,10 +42,10 @@ jobs:
           command: php artisan key:generate
 
       - run:
-          name: "Create database and run migration"
+          name: "Create database"
           command: touch database/database.sqlite
 
       # run tests with phpunit
       - run:
           name: "Run Tests"
-          command: composer test
+          command: vendor/bin/phpunit
