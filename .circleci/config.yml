@@ -49,6 +49,10 @@ jobs:
           name: "Run migration"
           command: php artisan migrate
 
+      - run:
+          name: "Run migration"
+          command: php artisan config:cache
+
       # run tests with phpunit
       - run:
           name: "Run Tests"
